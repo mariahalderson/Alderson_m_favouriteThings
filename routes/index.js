@@ -10,8 +10,19 @@ router.get('/', function(req, res, next) {
       throw err;
       console.log(err);
     }else{
-      console.log(result);
-      // res.render('index', { avatars: result });
+      res.render('index', { avatars: result });
+    }
+  });
+});
+
+router.get('/:hero', function(req, res, next) {
+  //call db for individual data
+  connect.query(`SELECT * FROM hero WHERE name = "${req.params.hero}"`, (err, result) => {
+    if(err){
+      throw err;
+      console.log(err);
+    }else{
+      res.render('bio', { biodata: result[0] });
     }
   });
 });
