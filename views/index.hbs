@@ -1,3 +1,9 @@
-<a href="/1">dog</a>
-<a href="/2">pasta</a>
-<a href="/3">coffee</a>
+<section id="thingLinks">
+  {{#each things}}
+  <div class="thing-container" data-image="{{image}}">
+    <a href="/{{id}}">
+      <h3>{{title}}</h3>
+    </a>
+  </div>
+  {{/each}}
+</section>
