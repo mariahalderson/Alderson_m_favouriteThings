@@ -1,10 +1,9 @@
-<section id="heroes">
-  {{#each avatars}}
-  <div class="hero-container">
-    <a href="/{{name}}">
-      <img src="/images/{{avatar}}" alt ="{{name}} avatar">
+<section id="thingLinks">
+  {{#each things}}
+  <div class="thing-container" data-image="{{image}}">
+    <a href="/{{id}}">
+      <h3>{{title}}</h3>
     </a>
-    <h3 class="hero-name">{{name}}</h3>
   </div>
   {{/each}}
 </section>

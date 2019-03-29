@@ -1,0 +1,14 @@
+<section id="content">
+  <h2>{{thing.title}}</h2>
+  <h3>{{thing.heading}}</h3>
+
+  <div class="images">
+    {{#each images}}
+      <div class="image-container" data-image="{{image}}">
+        <!-- <img src="/images/{{image}}" alt="a picture of {{images.title}}"> -->
+      </div>
+    {{/each}}
+  </div>
+
+  <p>{{thing.description}}</p>
+</section>
